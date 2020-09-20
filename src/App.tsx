@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import axios from 'axios';
+import Profile from './profile';
+import Skeleton from './skeleton';
 
-function App() {
+const App = () => {
+
+  const [profiles, setProfiles] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get('https://json-placeholder-api.now.sh/api/profiles');
+        setProfiles(data.default.profiles);
+        setIsLoading(true);
+      }
+      catch (error) {
+        console.log('error', error);
+      }
+    }
+    fetchData();
+  }, []);
+
+  if (!isLoading) {
+    return <Skeleton ready={false} rows={3} type='media' color="#E0E0E0" showLoadingAnimation><></></Skeleton>
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Profile data={profiles}></Profile>
+    </>
+  )
 }
 
 export default App;

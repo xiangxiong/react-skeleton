@@ -1,44 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+>  项目介绍:
+  * 1、工程搭建
+    yarn create react-app my-app --typescript
+    相关文档: https://www.html.cn/create-react-app/docs/adding-typescript/
+    await axios.get('https://json-placeholder-api.now.sh/api/profiles')
 
-## Available Scripts
+  * 2、基本概念:
+    * 骨架屏（Skeleton Screen）已经不是什么新奇的概念了，Luke Wroblewski 早在 2013 年就首次提出了骨架屏的概念，并将这一概念成功得运用到他当时的产品「Polar app」中，2014 年，「Polar」加入 Google，Luke Wroblewski 本人也成为了Google 的一位产品总监。
+    A skeleton screen is essentially a blank version of a page into which information is gradually loaded.
+    他是这样定义骨架屏的，他认为骨架屏是一个页面的空白版本，通过这个空白版本传递信息，我们的页面正在渐进式的加载过程中。
+    苹果公司已经将骨架屏写入到了 iOS Human Interface Guidelines ,只是在该手册中，其用了一个新的概念「launch images」。在该手册中，其推荐在应用首屏中包含文本或者元素基本的轮廓。
+    2015 年，Facebook 也首次在其移动端 App 中使用了骨架屏的设计来预览页面的加载状态.
 
-In the project directory, you can run:
+  * 3、为什么要用骨架屏:
+    * 用户大概会在 200ms 内获取到界面的具体关注点，在数据获取或页面加载完成之前，给用户首先展现骨架屏，骨架屏的样式、布局和真实数据渲染的页面保持一致，这样用户在骨架屏中获取到关注点，并能够预知页面什么地方将要展示文字什么地方展示图片，这样也就能够将关注焦点移到感兴趣的位置。当真实数据获取后，用真实数据渲染的页面替换骨架屏，如果整个过程在 1s 以内，用户几乎感知不到数据的加载过程和最终渲染的页面替换骨架屏，而在用户的感知上，出现骨架屏那一刻数据已经获取到了，而后只是数据渐进式的渲染出来。这样用户感知页面加载更快了.
 
-### `yarn start`
+  * 3、手写骨架屏的原理.
+    * 根据不同状态渲染不同的html, 首次数据没有加载完成时，使用骨架屏占位; 首次加载完成后，移除骨架屏占位，渲染真实的数据.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  * 4、组件设计图.
+    * 
+    
+  * 5、技术总结:
+    * 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+ * 参考文献:
+  * https://github.com/Jocs/jocs.github.io/issues/22
