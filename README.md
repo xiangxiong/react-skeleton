@@ -1,8 +1,7 @@
 >  项目介绍:
   * 1、工程搭建
-    yarn create react-app my-app --typescript
-    相关文档: https://www.html.cn/create-react-app/docs/adding-typescript/
-    await axios.get('https://json-placeholder-api.now.sh/api/profiles')
+    * yarn create react-app my-app --typescript
+    * 相关文档: https://www.html.cn/create-react-app/docs/adding-typescript/
 
   * 2、基本概念:
     * 骨架屏（Skeleton Screen）已经不是什么新奇的概念了，Luke Wroblewski 早在 2013 年就首次提出了骨架屏的概念，并将这一概念成功得运用到他当时的产品「Polar app」中，2014 年，「Polar」加入 Google，Luke Wroblewski 本人也成为了Google 的一位产品总监。
