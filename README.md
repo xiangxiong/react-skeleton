@@ -18,10 +18,10 @@
     * 根据不同状态渲染不同的html, 首次数据没有加载完成时，使用骨架屏占位; 首次加载完成后，移除骨架屏占位，渲染真实的数据.
 
   * 4、组件设计图.
-    * 
+     ![avatar](https://github.com/xiangxiong/react-skeleton/blob/8538a916f54fad766aee4e1f6726179c9ec751f1/img/1.jpg)
     
   * 5、技术总结:
-    * 
+     ![avatar](https://github.com/xiangxiong/react-skeleton/blob/8538a916f54fad766aee4e1f6726179c9ec751f1/img/2.jpg)
 
  * 参考文献:
   * https://github.com/Jocs/jocs.github.io/issues/22
