@@ -1,3 +1,7 @@
+>  项目运行:
+  * yarn install / npm install
+  * yarn start
+
 >  项目介绍:
   * 1、工程搭建
     * yarn create react-app my-app --typescript
