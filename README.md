@@ -29,6 +29,3 @@
     <a href="#">
   <img src="https://github.com/xiangxiong/react-skeleton/blob/8538a916f54fad766aee4e1f6726179c9ec751f1/img/2.jpg">
 </a>
-
- * 参考文献:
-  * https://github.com/Jocs/jocs.github.io/issues/22
